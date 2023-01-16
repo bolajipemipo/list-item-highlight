@@ -1,0 +1,22 @@
+<h4>Unprocessed List</h4>
+<p>Highlight any of the list items.</p>
+<ul>
+  <li
+    *ngFor="let node of allNodes"
+    (mousedown)="onmousedown($event, node)"
+    (mouseover)="onmouseover($event, node)"
+    (mouseup)="onmouseup($event, node)"
+  >
+    {{ node.id }} - {{ node.description }}
+  </li>
+</ul>
+
+<br />
+
+<h4>Processed List</h4>
+<p>List items highlighted.</p>
+<ul>
+  <li *ngFor="let node of nodesProcessed">
+    {{ node.id }} - {{ node.description }}
+  </li>
+</ul>
